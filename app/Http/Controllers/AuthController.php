@@ -23,6 +23,7 @@ class AuthController extends Controller
 
   public function login(Request $request)
   {
+    // eval(\Psy\sh());
     $credentials = $request->only(['email', 'password']);
 
     if (!$token = auth()->attempt($credentials)) {

@@ -17,11 +17,13 @@ class UsersTableSeeder extends Seeder
 
         $faker = \Faker\Factory::create();
 
+        $password = Hash::make('password');
+
         User::create([
           'first_name' => 'Patrick',
           'last_name' => 'Doyle',
           'email' => 'admin@null.com',
-          'password' => 'password'
+          'password' => $password
         ]);
 
         for ($i = 0; $i < 10; $i++) {
@@ -29,7 +31,7 @@ class UsersTableSeeder extends Seeder
               'first_name' => $faker->firstName,
               'last_name' => $faker->lastName,
               'email' => $faker->email,
-              'password' => 'password'
+              'password' => $password
             ]);
         }
     }
