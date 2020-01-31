@@ -23,6 +23,7 @@ class AuthController extends Controller
 
   public function login(Request $request)
   {
+    // POST /api/login?email=xxx&password=yyyy
     // eval(\Psy\sh());
     $credentials = $request->only(['email', 'password']);
 

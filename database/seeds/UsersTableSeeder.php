@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
 
         $faker = \Faker\Factory::create();
 
-        $password = Hash::make('password');
+        $password = Hash::make('password'); //AuthController@login auth()->attempt($credentials) expects password to be hashed this way
 
         User::create([
           'first_name' => 'Patrick',

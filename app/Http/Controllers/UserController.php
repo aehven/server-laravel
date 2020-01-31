@@ -41,7 +41,7 @@ class UserController extends Controller
 
     /**
      * Display the specified resource.
-     *
+     * request GET /api/users/1?token=<access_token from login>
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
